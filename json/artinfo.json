@@ -1,6 +1,33 @@
 {
 	"pieces": [
 		{
+			"filename": "Scales.jpg",
+			"title": "Scales",
+			"medium": "Spraypaint on canvas",
+			"size": "22 x 28",
+			"available": false,
+			"new": false
+		},
+
+		{
+			"filename": "Seoul_Metropolitan.jpg",
+			"title": "Seoul Metropolitan",
+			"medium": "Spraypaint on canvas",
+			"size": "12 x 9",
+			"available": true,
+			"new": false
+		},
+
+		{
+			"filename": "Gorilla.jpg",
+			"title": "Gorilla",
+			"medium": "Spraypaint on canvas panel",
+			"size": "22 x 28",
+			"available": true,
+			"new": false
+		},
+		
+		{
 			"filename": "Ice_Queen_B.jpg",
 			"title": "Ice Queen B",
 			"medium": "Spraypaint on canvas",
@@ -32,7 +59,7 @@
 			"title": "Red Panda",
 			"medium": "Spraypaint on canvas",
 			"size": "16 x 20",
-			"available": true,
+			"available": false,
 			"new": false
 		},
 
@@ -45,32 +72,6 @@
 			"new": false
 		},
 
-		{
-			"filename": "Scales.jpg",
-			"title": "Scales",
-			"medium": "Spraypaint on canvas",
-			"size": "22 x 28",
-			"available": false,
-			"new": false
-		},
-
-		{
-			"filename": "Seoul_Metropolitan.jpg",
-			"title": "Seoul Metropolitan",
-			"medium": "Spraypaint on canvas",
-			"size": "12 x 9",
-			"available": true,
-			"new": false
-		},
-
-		{
-			"filename": "Gorilla.jpg",
-			"title": "Gorilla",
-			"medium": "Spraypaint on canvas panel",
-			"size": "22 x 28",
-			"available": true,
-			"new": false
-		},
 
 		{
 			"filename": "Darienne_Lake.jpg",

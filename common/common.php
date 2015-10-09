@@ -20,7 +20,7 @@ function head() { ?>
 		<body>
 			<div class="wrap">
 				<div class="brand">Henke Stencils</div>
-				<aside class="col-2  hidden">
+				<aside class="col-2">
 					<ul class="nav">
 						<li><a href="index.php">Work</a></li>
 						<li><a href="about.php">About</a></li>

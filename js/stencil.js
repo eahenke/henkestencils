@@ -8,7 +8,6 @@
 			mobileNav();
 			getInfo();
 		} else {
-			loadUp();
 			$(".img-container").click(lightbox);
 			$(".img-container").hover(showInfo, hideInfo);			
 		}
@@ -121,23 +120,13 @@
 		$("body").addClass("overflow");		
 	}
 
-	//fadein and menu animation
-	function loadUp() {
-		$("body").addClass("hidden");
-		$("body").fadeIn(1000);
-		setTimeout(function() {
-			$("aside").slideDown(1000);
-			
-		}, 2000);
-	}
-
 	function showInfo() {
-		$(this).children(".info").slideDown(650);
-		$(this).find(".title").animate({"width" : "show"}, 650);
+		$(this).children(".info").fadeIn(650);
+		$(this).find(".title").fadeIn(650);
 	}
 
 	function hideInfo() {
-		$(this).children(".info").slideUp(650);
-		$(this).find(".title").animate({"width" : "hide"}, 650);
+		$(this).children(".info").fadeOut(650);
+		$(this).children(".title").fadeOut(650);
 	}
 })();

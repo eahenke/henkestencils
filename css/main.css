@@ -70,6 +70,7 @@ body {
 
 a {
 	text-decoration: none;
+	cursor: pointer;
 }
 
 .about {
@@ -77,13 +78,12 @@ a {
 	margin-bottom: 100px;
 }
 
-aside ul li {
+aside > ul > li {
 	margin-top: 10px;
 }
 
-aside ul li a:hover {
+aside > ul > li > a:hover {
 	font-weight: bold;
-	cursor: default;
 }
 
 .banner > img {
@@ -103,7 +103,7 @@ aside ul li a:hover {
 	height: 20px;
 }
 
-.close img, .info {
+.close > img, .info {
 	width: 100%;
 }
 
@@ -133,6 +133,7 @@ hr {
 .img-container img {
 	width: 100%;
 	height: auto;
+	cursor: pointer;
 }
 
 .info {
