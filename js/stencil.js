@@ -69,6 +69,7 @@
 	}
 
 	//create lightbox
+	//Bound to click on '.img-container', 'this' refers to '.img-container'
 	function lightbox() {
 		var imageSrc = $(this).find("img").attr("src");
 		var imageSrc = bigify(imageSrc);
