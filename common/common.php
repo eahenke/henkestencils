@@ -23,8 +23,7 @@ function head() { ?>
 				<aside class="col-2">
 					<ul class="nav">
 						<li><a href="index.php">Work</a></li>
-						<li><a href="about.php">About</a></li>
-						<li><a href="contact.php">Commissions<br />and<br />Contact</a></li>
+						<li><a href="about.php">Eric Henke</a></li>
 					</ul>
 					<hr />
 					<ul class="social">

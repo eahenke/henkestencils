@@ -33,7 +33,7 @@ aside, .brand, .close, .img-container {
 	float: none;
 }
 
-.contact >p, .gallery > p, .img-container, .lightbox, .new-work, .title {
+.gallery > p, .img-container, .lightbox, .new-work, .title {
 	text-align: center;
 }
 
@@ -73,9 +73,8 @@ a {
 	cursor: pointer;
 }
 
-.about {
+.about, .contact {
 	text-align: justify;
-	margin-bottom: 100px;
 }
 
 aside > ul > li {
