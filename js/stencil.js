@@ -77,7 +77,7 @@
 
 
 		image.load(function() {
-			console.log('loaded');
+			
 			if($(".lightbox").length > 0) {
 				$(".lightbox-content").children('img').remove();
 				// $(".lightbox-content").append(image);
