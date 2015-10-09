@@ -1,0 +1,130 @@
+{
+	"pieces": [
+		{
+			"filename": "Ice_Queen_B.jpg",
+			"title": "Ice Queen B",
+			"medium": "Spraypaint on canvas",
+			"size": "16 x 24",
+			"available": true,
+			"new": true 
+		},
+
+		{
+			"filename": "Unlike_You.jpg",
+			"title": "Unlike You",
+			"medium": "Spraypaint on canvas",
+			"size": "18 x 24",
+			"available": true,
+			"new": true 
+		},
+
+		{
+			"filename": "Terminally_Delightful.jpg",
+			"title": "Terminally Delightful",
+			"medium": "Spraypaint on canvas",
+			"size": "16 x 20",
+			"available": true,
+			"new": false			
+		},
+
+		{
+			"filename":"Red_Panda.jpg",
+			"title": "Red Panda",
+			"medium": "Spraypaint on canvas",
+			"size": "16 x 20",
+			"available": true,
+			"new": false
+		},
+
+		{
+			"filename": "Whatuptho.jpg",
+			"title": "Whatuptho",
+			"medium": "Spraypaint on canvas panel",
+			"size": "18 x 24",
+			"available": true,
+			"new": false
+		},
+
+		{
+			"filename": "Scales.jpg",
+			"title": "Scales",
+			"medium": "Spraypaint on canvas",
+			"size": "22 x 28",
+			"available": false,
+			"new": false
+		},
+
+		{
+			"filename": "Seoul_Metropolitan.jpg",
+			"title": "Seoul Metropolitan",
+			"medium": "Spraypaint on canvas",
+			"size": "12 x 9",
+			"available": true,
+			"new": false
+		},
+
+		{
+			"filename": "Gorilla.jpg",
+			"title": "Gorilla",
+			"medium": "Spraypaint on canvas panel",
+			"size": "22 x 28",
+			"available": true,
+			"new": false
+		},
+
+		{
+			"filename": "Darienne_Lake.jpg",
+			"title": "Drowning in the Waters of Darienne Lake",
+			"medium": "Spraypaint on canvas",
+			"size": "16 x 20",
+			"available": false,
+			"new": false
+		},
+
+		{
+			"filename": "Monsoon_Season.jpg",
+			"title": "Monsoon Season",
+			"medium": "Spraypaint on canvas",
+			"size": "16 x 20",
+			"available": true,
+			"new": false
+		},
+
+		{
+			"filename": "Master_of_the_Senate.jpg",
+			"title": "Master of the Senate",
+			"medium": "Spraypaint on canvas panel",
+			"size": "22 x 28",
+			"available": true,
+			"new": false
+		},
+
+		{
+			"filename": "Space_1.jpg",
+			"title": "Space 1",
+			"medium": "Spraypaint on canvas",
+			"size": "16 x 20",
+			"available": true,
+			"new": false
+		},
+
+		{
+			"filename": "Space_2.jpg",
+			"title": "Space 2",
+			"medium": "Spraypaint on canvas",
+			"size": "11 x 14",
+			"available": true,
+			"new": false
+		},
+
+		{
+			"filename": "Space_3.jpg",
+			"title": "Space 3",
+			"medium": "Spraypaint on canvas",
+			"size": "12 x 9",
+			"available": true,
+			"new": false
+		}
+
+	]
+}
