@@ -70,54 +70,60 @@
 
 	//create lightbox
 	function lightbox() {
-		var image = $(this).find("img").attr("src");
-		image = bigify(image);
+		var imageSrc = $(this).find("img").attr("src");
+		var imageSrc = bigify(imageSrc);
+		alert(imageSrc);
+		var image = $('<img>').attr({'src': imageSrc});
 		var alt = $(this).find("img").attr("alt");
 
-		if($(".lightbox").length > 0) {
-			$(".lightbox-content").children("img").attr({
-				src: image,
-				alt: alt
-			});			
-		} else { //build lightbox
-			var closeIcon = "<div class='close'>" +
-			"<img src='images/icons/close.png' alt='Close icon' />" +
-			"</div";
 
-			var lightbox = "<div class='lightbox'>" +
-			"<div class='lightbox-content'>" +
-			closeIcon + "</div>" + "</div>";
+		image.load(function() {
+				if($(".lightbox").length > 0) {
+					// $(".lightbox-content").children("img").attr({
+					// 	src: image,
+					// 	alt: alt
+					// });			
+					$(".lightbox-content").children('img').remove();
+					$(".lightbox-content").append(image);
 
-			$("body").append(lightbox);
-			$(".close").click(close);
-			$(".lightbox-content").append($("<img />", {
-				src: image,
-				alt: alt
-			}));
-		
-			//give relative height to content box			
-			var dimension = $(window).height();			
-			var dimension = (92 * dimension) / 100;
-			dimension = parseInt(dimension) + "px";
-			$(".lightbox-content").css("height", dimension);
-			$(".lightbox-content").children("img").addClass("height");
-		}
+				} else { //build lightbox
+					var closeIcon = "<div class='close'>" +
+					"<img src='images/icons/close.png' alt='Close icon' />" +
+					"</div";
 
-		//attach closer on off click
-		$(".lightbox").show("slow").on("click", function(e) {
-			if(e.target === this) {
-				close();
+					var lightbox = "<div class='lightbox'>" +
+					"<div class='lightbox-content'>" +
+					closeIcon + "</div>" + "</div>";
+
+					$("body").append(lightbox);
+					$(".close").click(close);
+					$(".lightbox-content").append(image);
+				
+			
+				//give relative height to content box			
+				var dimension = $(window).height();			
+				var dimension = (92 * dimension) / 100;
+				dimension = parseInt(dimension) + "px";
+				$(".lightbox-content").css("height", dimension);
+				$(".lightbox-content").children("img").addClass("height");
 			}
-		});
 
-		//attach closer on esc
-		$(document).on("keydown", function(e) {
-			if(e.keyCode == 27) { //ESC
-				close();
-			}
-		});
+			//attach closer on off click
+			$(".lightbox").show("slow").on("click", function(e) {
+				if(e.target === this) {
+					close();
+				}
+			});
 
-		$("body").addClass("overflow");		
+			//attach closer on esc
+			$(document).on("keydown", function(e) {
+				if(e.keyCode == 27) { //ESC
+					close();
+				}
+			});
+
+			$("body").addClass("overflow");
+		});
 	}
 
 	function showInfo() {
