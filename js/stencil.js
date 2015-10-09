@@ -72,15 +72,14 @@
 	function lightbox() {
 		var imageSrc = $(this).find("img").attr("src");
 		var imageSrc = bigify(imageSrc);
-		var image = $('<img>').attr({'src': imageSrc}).addClass('height');
 		var alt = $(this).find("img").attr("alt");
+		var image = $('<img>').attr({'src': imageSrc, 'alt': alt}).addClass('height');
 
 
 		image.load(function() {
 			
 			if($(".lightbox").length > 0) {
 				$(".lightbox-content").children('img').remove();
-				// $(".lightbox-content").append(image);
 
 			} else { //build lightbox
 				var closeIcon = "<div class='close'>" +
