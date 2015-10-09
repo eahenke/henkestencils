@@ -72,41 +72,37 @@
 	function lightbox() {
 		var imageSrc = $(this).find("img").attr("src");
 		var imageSrc = bigify(imageSrc);
-		alert(imageSrc);
-		var image = $('<img>').attr({'src': imageSrc});
+		var image = $('<img>').attr({'src': imageSrc}).addClass('height');
 		var alt = $(this).find("img").attr("alt");
 
 
 		image.load(function() {
-				if($(".lightbox").length > 0) {
-					// $(".lightbox-content").children("img").attr({
-					// 	src: image,
-					// 	alt: alt
-					// });			
-					$(".lightbox-content").children('img').remove();
-					$(".lightbox-content").append(image);
+			console.log('loaded');
+			if($(".lightbox").length > 0) {
+				$(".lightbox-content").children('img').remove();
+				// $(".lightbox-content").append(image);
 
-				} else { //build lightbox
-					var closeIcon = "<div class='close'>" +
-					"<img src='images/icons/close.png' alt='Close icon' />" +
-					"</div";
+			} else { //build lightbox
+				var closeIcon = "<div class='close'>" +
+				"<img src='images/icons/close.png' alt='Close icon' />" +
+				"</div";
 
-					var lightbox = "<div class='lightbox'>" +
-					"<div class='lightbox-content'>" +
-					closeIcon + "</div>" + "</div>";
+				var lightbox = "<div class='lightbox'>" +
+				"<div class='lightbox-content'>" +
+				closeIcon + "</div>" + "</div>";
 
-					$("body").append(lightbox);
-					$(".close").click(close);
-					$(".lightbox-content").append(image);
-				
+				$("body").append(lightbox);
+				$(".close").click(close);
+				// $(".lightbox-content").append(image);
 			
+		
 				//give relative height to content box			
 				var dimension = $(window).height();			
 				var dimension = (92 * dimension) / 100;
 				dimension = parseInt(dimension) + "px";
 				$(".lightbox-content").css("height", dimension);
-				$(".lightbox-content").children("img").addClass("height");
 			}
+			$(".lightbox-content").append(image);
 
 			//attach closer on off click
 			$(".lightbox").show("slow").on("click", function(e) {
