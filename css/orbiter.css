@@ -14,8 +14,7 @@
   -o-animation: orbit 2s linear infinite;
   
   box-shadow: -12px 12px 0 #fff,
-    12px -12px 0 #fff
-  
+    12px -12px 0 #fff;  
 }
 
 @keyframes orbit {
