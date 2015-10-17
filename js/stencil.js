@@ -3,7 +3,6 @@
 
 	$(document).ready(function() {
 
-
 		if($(window).width() < 800) { //mobile
 			mobileNav();
 			getInfo();
@@ -11,7 +10,6 @@
 			$(".img-container").click(lightbox);
 			$(".img-container").hover(showInfo, hideInfo);			
 		}
-
 	});
 
 	//detach and reassign nav and soc
@@ -41,8 +39,9 @@
 		var socialBar = $("<div>").addClass("socialBar").append(soc).prependTo($(".grid-container"));
 	}
 
+	//Closes the lightbox
 	function close() {
-		$(".lightbox").hide("slow");
+		$(".lightbox").addClass("hidden");
 		$("body").removeClass("overflow");
 	}
 
@@ -76,9 +75,11 @@
 		var alt = $(this).find("img").attr("alt");
 		var image = $('<img>').attr({'src': imageSrc, 'alt': alt}).addClass('height');
 
+		showLoader(true);
 
 		image.load(function() {
-			
+			showLoader(false);
+
 			if($(".lightbox").length > 0) {
 				$(".lightbox-content").children('img').remove();
 
@@ -87,14 +88,14 @@
 				"<img src='images/icons/close.png' alt='Close icon' />" +
 				"</div";
 
-				var lightbox = "<div class='lightbox'>" +
+				var lightbox = "<div class='lightbox hidden'>" +
 				"<div class='lightbox-content'>" +
 				closeIcon + "</div>" + "</div>";
 
+				var loader = $("<div>").addClass("loader ellipsis center hidden");
+
 				$("body").append(lightbox);
-				$(".close").click(close);
-				// $(".lightbox-content").append(image);
-			
+				$(".close").click(close);			
 		
 				//give relative height to content box			
 				var dimension = $(window).height();			
@@ -105,7 +106,7 @@
 			$(".lightbox-content").append(image);
 
 			//attach closer on off click
-			$(".lightbox").show("slow").on("click", function(e) {
+			$(".lightbox").removeClass('hidden').on("click", function(e) {
 				if(e.target === this) {
 					close();
 				}
@@ -122,11 +123,22 @@
 		});
 	}
 
+	//Pass true to turn on the loader, false to turn it off
+	function showLoader(bool) {
+		if(bool) {
+			$(".loader-wrapper").removeClass("hidden");
+		} else {
+			$(".loader-wrapper").addClass("hidden");
+		}
+	}
+
+	//Show painting information
 	function showInfo() {
 		$(this).children(".info").fadeIn(650);
 		$(this).find(".title").fadeIn(650);
 	}
 
+	//Hides painting information
 	function hideInfo() {
 		$(this).children(".info").fadeOut(650);
 		$(this).children(".title").fadeOut(650);
