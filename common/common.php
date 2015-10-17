@@ -15,10 +15,14 @@ function head() { ?>
 		 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
 		 	<link href="css/grid.css" rel="stylesheet" type="text/css" />
 		    <link href="css/main.css" rel="stylesheet" type="text/css" />
+		     <link href="css/orbiter.css" rel="stylesheet" type="text/css" />
 		    <link rel="stylesheet" href="css/mobilefonts.css">
 		</head>
 		<body>
 			<div class="wrap">
+				<div class="loader-wrapper hidden">
+					<div class="loader orbiter center"></div>
+				</div>
 				<div class="brand">Henke Stencils</div>
 				<aside class="col-2">
 					<ul class="nav">
