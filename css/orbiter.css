@@ -1,0 +1,35 @@
+.orbiter::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+}
+
+.orbiter::before {
+  animation-delay: 1s;
+  animation: orbit 2s linear infinite;
+  -webkit-animation: orbit 2s linear infinite;
+  -moz-animation: orbit 2s linear infinite;
+  -o-animation: orbit 2s linear infinite;
+  
+  box-shadow: -12px 12px 0 #fff,
+    12px -12px 0 #fff
+  
+}
+
+@keyframes orbit {
+  80%{transform: rotate(720deg);}  
+}
+
+@-webkit-keyframes orbit {
+  80%{-webkit-transform: rotate(720deg);}  
+}
+
+@-moz-keyframes orbit {
+  80%{-moz-transform: rotate(720deg);}  
+}
+
+@-o-keyframes orbit {
+  80%{-o-transform: rotate(720deg);}  
+}
